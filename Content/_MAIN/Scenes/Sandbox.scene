@@ -1,0 +1,172 @@
+{
+	"ID": "dc0ac50a4180dff3a66977b1a835d397",
+	"TypeName": "FlaxEngine.SceneAsset",
+	"EngineBuild": 6605,
+	"Data": [
+		{
+			"ID": "dc0ac50a4180dff3a66977b1a835d397",
+			"TypeName": "FlaxEngine.Scene",
+			"LightmapSettings": {
+				"IndirectLightingIntensity": 1.0,
+				"GlobalObjectsScale": 1.0,
+				"ChartsPadding": 3,
+				"AtlasSize": 1024,
+				"BounceCount": 1,
+				"CompressLightmaps": true,
+				"UseGeometryWithNoMaterials": true,
+				"Quality": 10
+			}
+		},
+		{
+			"ID": "016e89b94543f013041b77a4382c8cb5",
+			"TypeName": "FlaxEngine.DirectionalLight",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Sun",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 160.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.3826834559440613,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9238795042037964
+				}
+			}
+		},
+		{
+			"ID": "a867f5764f9cbecd7134a9ab2382ba2d",
+			"TypeName": "FlaxEngine.Sky",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Sky",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 150.0,
+					"Z": 0.0
+				}
+			},
+			"Sun": "016e89b94543f013041b77a4382c8cb5"
+		},
+		{
+			"ID": "b22236374a6e5083fb1568b399deaaa0",
+			"TypeName": "FlaxEngine.SkyLight",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "SkyLight",
+			"Brightness": 2.5,
+			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
+			"ID": "7c4358b644f183b280972fb01e907124",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Floor",
+			"Transform": {
+				"Scale": {
+					"X": 4.0,
+					"Y": 0.5,
+					"Z": 4.0
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "1771b53343d461faacdf2c8581b1fdbb",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "c587abfa46c71f30ade319ae1ef2ac40",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "7c4358b644f183b280972fb01e907124",
+			"Name": "BoxCollider"
+		},
+		{
+			"ID": "23dc0089407468b83a1207b9b9f493fd",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 150.0,
+					"Z": -300.0
+				}
+			}
+		},
+		{
+			"ID": "8d601ca74f9af98a9e88c48562d37f9d",
+			"TypeName": "FlaxEngine.AudioListener",
+			"ParentID": "23dc0089407468b83a1207b9b9f493fd",
+			"Name": "Audio Listener"
+		},
+		{
+			"ID": "3eb3924740c21d71e67092a5d8c49013",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Player",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 100.0,
+					"Z": 0.0
+				}
+			},
+			"Mass": 523.5988159179688
+		},
+		{
+			"ID": "c73dea1445499f33f52ed1b36bf1ede7",
+			"TypeName": "Game.PlayerMovement",
+			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
+			"V": {}
+		},
+		{
+			"ID": "e9e16db44035a0c8c6d620ab62ae0334",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
+			"Name": "StaticModel",
+			"Model": "dd86c4724bf734c4959d23b3c74faa05",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "82f864b44ea290af09a1ecb0986b3224",
+			"TypeName": "FlaxEngine.SphereCollider",
+			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
+			"Name": "SphereCollider"
+		},
+		{
+			"ID": "189b411f4fba66541ca02a8446e4d6fd",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "Managers"
+		},
+		{
+			"ID": "3b17d77f4c91093088a1dd9b11292caf",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "189b411f4fba66541ca02a8446e4d6fd",
+			"Name": "InputManager"
+		},
+		{
+			"ID": "f23a877049d66fd0ec5500ad07981b94",
+			"TypeName": "Game.InputManager",
+			"ParentID": "3b17d77f4c91093088a1dd9b11292caf",
+			"V": {}
+		}
+	]
+}
