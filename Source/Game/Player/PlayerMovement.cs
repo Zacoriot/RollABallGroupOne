@@ -7,8 +7,24 @@ namespace Game;
 /// </summary>
 public class PlayerMovement : Script
 {
-    public override void OnUpdate()
+    RigidBody _Rigibody;
+
+    [Header("==MOVEMENT==")]
+    [ShowInEditor, Serialize] float _RollSpeed;
+
+    public override void OnStart()
     {
-        Debug.Log(InputManager.GetMovementAxis());
+        _Rigibody = (RigidBody)Actor;
+    }
+
+    public override void OnFixedUpdate()
+    {
+        Vector3 finalForce = new Vector3(InputManager.GetMovementAxis().X,
+                                        0,
+                                        InputManager.GetMovementAxis().Y);
+
+        finalForce = finalForce.Normalized * _RollSpeed;
+
+        _Rigibody.AddForce(finalForce);
     }
 }

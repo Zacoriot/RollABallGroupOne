@@ -65,9 +65,9 @@
 			"Name": "Floor",
 			"Transform": {
 				"Scale": {
-					"X": 4.0,
+					"X": 50.0,
 					"Y": 0.5,
-					"Z": 4.0
+					"Z": 50.0
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
@@ -96,8 +96,8 @@
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": 150.0,
-					"Z": -300.0
+					"Y": 183.0,
+					"Z": -306.0
 				}
 			}
 		},
@@ -115,17 +115,19 @@
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": 100.0,
+					"Y": 269.0,
 					"Z": 0.0
 				}
 			},
-			"Mass": 523.5988159179688
+			"OverrideMass": true
 		},
 		{
 			"ID": "c73dea1445499f33f52ed1b36bf1ede7",
 			"TypeName": "Game.PlayerMovement",
 			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
-			"V": {}
+			"V": {
+	"_RollSpeed": 500.0
+}
 		},
 		{
 			"ID": "e9e16db44035a0c8c6d620ab62ae0334",
