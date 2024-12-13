@@ -119,6 +119,7 @@
 					"Z": 0.0
 				}
 			},
+			"Layer": 1,
 			"OverrideMass": true
 		},
 		{
@@ -126,7 +127,17 @@
 			"TypeName": "Game.PlayerMovement",
 			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
 			"V": {
-	"_RollSpeed": 500.0
+	"_RollSpeed": 500.0,
+	"_JumpForce": 5000.0,
+	"_GroundDetectRadius": 25.0,
+	"_GroundDetectOffset": {
+		"X": 0.0,
+		"Y": -50.0,
+		"Z": 0.0
+	},
+	"_GroundMask": {
+		"Mask": 1
+	}
 }
 		},
 		{
@@ -134,6 +145,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
 			"Name": "StaticModel",
+			"Layer": 1,
 			"Model": "dd86c4724bf734c4959d23b3c74faa05",
 			"Buffer": {
 				"Entries": [
@@ -150,7 +162,8 @@
 			"ID": "82f864b44ea290af09a1ecb0986b3224",
 			"TypeName": "FlaxEngine.SphereCollider",
 			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
-			"Name": "SphereCollider"
+			"Name": "SphereCollider",
+			"Layer": 1
 		},
 		{
 			"ID": "189b411f4fba66541ca02a8446e4d6fd",

@@ -12,6 +12,20 @@ public class PlayerMovement : Script
     [Header("==MOVEMENT==")]
     [ShowInEditor, Serialize] float _RollSpeed;
 
+    [Header("==JUMP==")]
+    [ShowInEditor, Serialize] float _JumpForce;
+
+    [Header("==GROUND DETECTION==")]
+    [ShowInEditor, Serialize] float _GroundDetectRadius;
+    [ShowInEditor, Serialize] Vector3 _GroundDetectOffset;
+    [ShowInEditor, Serialize] LayersMask _GroundMask;
+    bool _IsGrounded => Physics.CheckSphere(Actor.Position + _GroundDetectOffset, _GroundDetectRadius, _GroundMask);
+
+    public override void OnEnable()
+    {
+        InputManager.GetJumpEvent().Pressed += Jump;
+    }
+
     public override void OnStart()
     {
         _Rigibody = (RigidBody)Actor;
@@ -26,5 +40,22 @@ public class PlayerMovement : Script
         finalForce = finalForce.Normalized * _RollSpeed;
 
         _Rigibody.AddForce(finalForce);
+    }
+
+    void Jump()
+    {
+        if(!_IsGrounded)
+        {
+            return;
+        }
+
+        _Rigibody.AddForce(Vector3.Up * _JumpForce);
+    }
+
+    public override void OnDebugDraw()
+    {
+        DebugDraw.DrawWireSphere(
+            new BoundingSphere(Actor.Position + _GroundDetectOffset, _GroundDetectRadius),
+            Color.Green);
     }
 }
