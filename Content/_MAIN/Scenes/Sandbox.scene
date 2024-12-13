@@ -128,7 +128,7 @@
 			"ParentID": "3eb3924740c21d71e67092a5d8c49013",
 			"V": {
 	"_RollSpeed": 500.0,
-	"_JumpForce": 5000.0,
+	"_JumpForce": 50000.0,
 	"_GroundDetectRadius": 25.0,
 	"_GroundDetectOffset": {
 		"X": 0.0,
