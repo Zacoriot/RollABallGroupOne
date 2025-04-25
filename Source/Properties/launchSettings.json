@@ -2,9 +2,9 @@
   "profiles": {
     "Game": {
       "commandName": "Executable",
-      "workingDirectory": "C:/Users/isaac/Desktop/Class Projects/RollABallGroupOne",
+      "workingDirectory": "C:/Users/isaac/Desktop/Projects/GitHub/RollABallGroupOne",
       "executablePath": "C:/_GAME DEV/FLAX/Flax_1.9/Binaries/Editor/Win64/Development/FlaxEditor.exe",
-      "commandLineArgs": "-project \"C:/Users/isaac/Desktop/Class Projects/RollABallGroupOne\"",
+      "commandLineArgs": "-project \"C:/Users/isaac/Desktop/Projects/GitHub/RollABallGroupOne\"",
       "nativeDebugging": false
     }
   }

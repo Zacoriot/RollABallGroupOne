@@ -65,9 +65,9 @@
 			"Name": "Floor",
 			"Transform": {
 				"Scale": {
-					"X": 50.0,
+					"X": 2.0,
 					"Y": 0.5,
-					"Z": 50.0
+					"Z": 2.0
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
@@ -96,8 +96,14 @@
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
-					"Y": 183.0,
+					"Y": 423.0,
 					"Z": -306.0
+				},
+				"Orientation": {
+					"X": 0.3826834559440613,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9238795042037964
 				}
 			}
 		},
@@ -120,6 +126,7 @@
 				}
 			},
 			"Layer": 1,
+			"Tag": "Player",
 			"OverrideMass": true
 		},
 		{
@@ -182,6 +189,33 @@
 			"TypeName": "Game.InputManager",
 			"ParentID": "3b17d77f4c91093088a1dd9b11292caf",
 			"V": {}
+		},
+		{
+			"ID": "964ace9e45c53dd1e5eb1f9fccc3f4f9",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "dc0ac50a4180dff3a66977b1a835d397",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -100.0,
+					"Z": 0.0
+				},
+				"Scale": {
+					"X": 100.0,
+					"Y": 1.0,
+					"Z": 100.0
+				}
+			},
+			"IsTrigger": true
+		},
+		{
+			"ID": "ad464930475acfe5eefc5ebc4fb47116",
+			"TypeName": "Game.DealthBox",
+			"ParentID": "964ace9e45c53dd1e5eb1f9fccc3f4f9",
+			"V": {
+	"_Scene": "dc0ac50a4180dff3a66977b1a835d397"
+}
 		}
 	]
 }
